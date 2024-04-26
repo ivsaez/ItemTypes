@@ -12,6 +12,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/ivsaez/ItemTypes</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="isz-Worlding" Version="1.9.0" />
+    <PackageReference Include="isz-Worlding" Version="1.9.1" />
   </ItemGroup>
 
 </Project>
