@@ -20,13 +20,14 @@ namespace ItemTypes
             Genere genere,
             Number number,
             uint capacity,
-            uint acceptedWeight)
+            uint acceptedWeight, 
+            IItem? key = null)
             : base(id, space, weight)
         {
             this.capacity = capacity;
             this.acceptedWeight = acceptedWeight;
             Articler = new Articler(genere, number);
-            Openable = new Openable(false);
+            Openable = new Openable(false, key);
             Inventory = new LimitedInventory(capacity, acceptedWeight);
         }
 

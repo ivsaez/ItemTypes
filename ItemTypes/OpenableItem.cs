@@ -8,10 +8,10 @@ namespace ItemTypes
     {
         public Openable Openable { get; private set; }
 
-        public OpenableItem(string id, uint space, uint weight)
+        public OpenableItem(string id, uint space, uint weight, IItem? key = null)
             : base(id, space, weight)
         {
-            Openable = new Openable(false);
+            Openable = new Openable(false, key);
         }
 
         protected override object clone() 

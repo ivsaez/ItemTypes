@@ -9,11 +9,11 @@ namespace ItemTypes
         public bool IsExternal { get; private set; }
         public Openable Openable { get; private set; }
 
-        public OpenableFurniture(string id, uint space, uint weight, bool external)
+        public OpenableFurniture(string id, uint space, uint weight, bool external, IItem? key = null)
             : base(id, space, weight)
         {
             IsExternal = external;
-            Openable = new Openable(false);
+            Openable = new Openable(false, key);
         }
 
         protected override object clone()

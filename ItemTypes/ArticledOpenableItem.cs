@@ -14,11 +14,12 @@ namespace ItemTypes
             uint space, 
             uint weight, 
             Genere genere, 
-            Number number)
+            Number number,
+            IItem? key = null)
             : base(id, space, weight)
         {
             Articler = new Articler(genere, number);
-            Openable = new Openable(false);
+            Openable = new Openable(false, key);
         }
 
         protected override object clone()

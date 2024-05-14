@@ -16,12 +16,13 @@ namespace ItemTypes
             uint weight,
             bool external,
             Genere genere,
-            Number number)
+            Number number,
+            IItem? key = null)
             : base(id, space, weight)
         {
             IsExternal = external;
             Articler = new Articler(genere, number);
-            Openable = new Openable(false);
+            Openable = new Openable(false, key);
         }
 
         protected override object clone()

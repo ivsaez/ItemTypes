@@ -19,13 +19,14 @@ namespace ItemTypes
             uint weight,
             bool external,
             uint capacity,
-            uint acceptedWeight)
+            uint acceptedWeight,
+            IItem? key = null)
             : base(id, space, weight)
         {
             this.capacity = capacity;
             this.acceptedWeight = acceptedWeight;
             IsExternal = external;
-            Openable = new Openable(false);
+            Openable = new Openable(false, key);
             Inventory = new LimitedInventory(capacity, acceptedWeight);
         }
 
